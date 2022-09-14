@@ -1,25 +1,63 @@
-import logo from './logo.svg';
+
+
+import { React , useState } from 'react';
 import './App.css';
 
+
+
+import asd from './Images/logoimg.png'
+
+import Button from './Components/Button';
+import Count from './Components/Count';
+ 
 function App() {
+
+  const [numClicks , setNumClicks] = useState(0)
+
+
+
+  const changeClick = () => {
+    setNumClicks( numClicks + 1)
+  }
+
+  const factorClick = () => {
+    setNumClicks( numClicks * 2)
+  }
+
+  const resetCount = () => {
+    setNumClicks(0)
+  }
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Contador de Clicks!</h1>
+
+      <img 
+      className='logo'
+        src={asd}
+      />
+
+
+      <div className='main-container'>
+
+        <Count numClicks={numClicks}/>
+
+        <Button  clickButton={true} text='Click' changeClick={ changeClick } />
+        <Button  clickButton={false} text='Reset' changeClick={ resetCount } />
+        <Button  clickButton={true} text='Multi' changeClick={ factorClick } />
+
+        
+
+        
+
+
+
+      </div>
     </div>
   );
 }
 
 export default App;
+

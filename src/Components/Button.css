@@ -1,0 +1,26 @@
+button{
+    width: 250px;
+    height: 80px;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(46, 192, 192);
+}
+
+
+.click-button{
+    background-color: #002ead;
+}
+
+.reset-button{
+    background-color: rgb(255, 101, 101);
+}
